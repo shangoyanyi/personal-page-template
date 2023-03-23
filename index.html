@@ -162,10 +162,14 @@
                 console.log(liff.isLoggedIn());  // 判斷開啟此網頁的 LINE 使用者是否為登入狀態
 
                 if(liff.isLoggedIn()){                  
-                  var liffProfile = liff.getProfile();
-                  console.log(liffProfile);
-                  console.log(liffProfile.displayName);
-                  console.log(liffProfile.pictureUrl);
+                  var liffProfile = liff.getProfile().then(profile => {
+                    const name = profile.displayName;
+                    const picture = profile.pictureUrl;
+
+                    console.log(profile);
+                    console.log(name);
+                    console.log(picture);
+                  });                  
                 }
             });
 
