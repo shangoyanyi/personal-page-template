@@ -43,13 +43,13 @@
 
               <br/>              
               <div class="row">
-                <div class="col col-tomycht">
+                <div class="col div-tomycht">
                   <div style="border:1px solid #efefef; border-radius:5px; padding:10px;">
                     <h6 style="font-weight:bold;">點數</h5>
                     <h2 style="color:chocolate">1,688</h2>
                   </div>                    
                 </div>
-                <div class="col col-tomycht">
+                <div class="col div-tomycht">
                   <div style="border:1px solid #efefef; border-radius:5px; padding:10px;">
                     <h6 style="font-weight:bold;">票券</h5>
                     <h2 style="color:chocolate">12</h2>
@@ -100,7 +100,7 @@
               <br/>
 
               <div style="text-align:left;"><h6 style="font-weight:bold;">專屬服務</h6></div>              
-              <div style="border:1px solid #efefef; border-radius: 5px; padding:10px; margin-top:4px;">
+              <div class="div-tolinepay" style="border:1px solid #efefef; border-radius: 5px; padding:10px; margin-top:4px;">
                 <div style="float:left; width:60px;"><img src="https://cpok.tw/wp-content/uploads/2020/10/line-pay-1.png" class="img-fluid"></div>
                 <div style="float:left; padding:10px; text-align:left; font-size:14px;">
                   <span>LINE Pay 繳費</span><br/>
@@ -227,9 +227,13 @@
                   location.href='https://hamipoint.cht.com.tw/my';
                 });
 
-                $('.col-tomycht').on('click',function(){
+                $('.div-tomycht').on('click',function(){
                   var myModal = new bootstrap.Modal(document.getElementById("inputPwdModal"), {});
                   myModal.show();
+                });
+
+                $('.div-tolinepay').on('click',function(){
+                  alert('前往LINE PAY繳費頁 (測試訊息)');                  
                 });
 
             });
