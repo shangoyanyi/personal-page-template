@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hello LINE Liff</title>
+        <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+        <script type='text/javascript' src='https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js'></script>
+        <script type="text/javascript" src="https://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.5/JsBarcode.all.min.js" integrity="sha512-QEAheCz+x/VkKtxeGoDq6nsGyzTx/0LMINTgQjqZ0h3+NjP+bCsPYz3hn0HnBkGmkIFSr7QcEZT+KyEM7lbLPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body>
+        <div style="width:100%; height:160px; background:url(https://vip.cht.com.tw/imgs/index-giftcard-enter.jpg); background-size:cover;"></div>
+        
+        <div class="container">
+            <div style="position:relative; top:-60px; text-align:center;">
+              <img id="user-photo" src="https://images.chinatimes.com/newsphoto/2023-03-19/656/20230319000034.jpg" width="120px" height="120px" style="object-fit:cover; border-radius:50%; border:2px solid #d7b97d;">
+              <p id="user-name" style="font-weight:bold; font-size:14px; padding-top:8px;">李多慧</p>
+            
+              
+              <div>
+                <img src="https://vip.cht.com.tw/img/index-timeline/index-timeline-B-1266w.png" class="img-fluid" style="border-radius:5px;">
+              </div>
+
+              <br/>
+              <div class="row">
+                <div class="col" style="text-align:left; border-right:1px solid #efefef;" >
+                  <span style="font-weight:bold;">近六個月平均帳金</span><br/>
+                  <span>3,888 元</span>
+                </div>
+                <div class="col" style="text-align:left;" >
+                  <span style="font-weight:bold;">離黑鑽級VIP還差</span><br/>
+                  <span>1,112元</span>
+                </div>
+              </div>
+
+
+              <br/>              
+              <div class="row">
+                <div class="col div-tomycht">
+                  <div style="border:1px solid #efefef; border-radius:5px; padding:10px;">
+                    <h6 style="font-weight:bold;">點數</h5>
+                    <h2 style="color:#d7b97d">1,688</h2>
+                  </div>                    
+                </div>
+                <div class="col div-tomycht">
+                  <div style="border:1px solid #efefef; border-radius:5px; padding:10px;">
+                    <h6 style="font-weight:bold;">票券</h5>
+                    <h2 style="color:#d7b97d">12</h2>
+                  </div>                    
+                </div>
+              </div>
+
+
+
+              <div style="margin-top:20px; text-align:left;"><h6 style="font-weight:bold;">專屬獻禮</h6></div>
+
+              <div style="border:1px solid #efefef; border-radius: 5px; padding:10px; margin-top:4px;">
+                <div style="float:left; width:60px;"><img src="https://vip.cht.com.tw/my/img/your-gift-area/etmall_coin.png" class="img-fluid"></div>
+                <div style="float:left; padding:10px; text-align:left; font-size:14px;">
+                  <span>限定活動！東森幣1000枚</span><br/>
+                  <span style="color:#aaa;">本年度限領一次</span>
+                </div>
+                <div style="float:right">
+                  <a href="#" class="btn btn-sm btn-light btn-getgift" style="margin-top:16px; border-radius:20px; background:linear-gradient(90deg,#d7b97d 25.6%,#c5a66c 59.2%); color:#fff;">立即領取</a>  
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+              
+              <div style="border:1px solid #efefef; border-radius: 5px; padding:10px; margin-top:4px;">
+                <div style="float:left; width:60px;"><img src="https://vip.cht.com.tw/my/img/your-gift-area/etmall_coin.png" class="img-fluid"></div>
+                <div style="float:left; padding:10px; text-align:left; font-size:14px;">
+                  <span>限定活動！東森幣1000枚</span><br/>
+                  <span style="color:#aaa;">本年度限領一次</span>
+                </div>
+                <div style="float:right">                  
+                  <a href="#" class="btn btn-sm btn-light btn-getgift" style="margin-top:16px; border-radius:20px; background:linear-gradient(90deg,#d7b97d 25.6%,#c5a66c 59.2%); color:#fff;">立即領取</a> 
+                </div>
+                <div style="clear:both;"></div>
+              </div>
+
+              <!-- <br/>
+
+              <div style="text-align:left;"><h6 style="font-weight:bold;">專屬服務</h6></div>              
+              <div class="div-tolinepay" style="border:1px solid #efefef; border-radius: 5px; padding:10px; margin-top:4px;">
+                <div style="float:left; width:60px;"><img src="https://cpok.tw/wp-content/uploads/2020/10/line-pay-1.png" class="img-fluid"></div>
+                <div style="float:left; padding:10px; text-align:left; font-size:14px;">
+                  <span>LINE Pay 繳費</span><br/>
+                  <span style="color:#aaa; font-size:12px;">使用 LINE Pay 繳納中華電信帳單</span>
+                </div>
+                <div style="float:right">
+                  <a href="#" class="btn btn-sm btn-light" style="border-radius:20px; margin-top:16px;">></a> 
+                </div>                
+                <div style="clear:both;"></div>
+              </div> -->
+
+            </div>
+
+            
+        </div>
+        <div style="position:fixed; bottom:15px; width:100%; text-align:center;">              
+          <a href="#" class="btn btn-light" style="border-radius:20px; background:linear-gradient(90deg,#d7b97d 25.6%,#c5a66c 59.2%); color:#fff;" data-bs-toggle="modal" data-bs-target="#exampleModal">顯示會員條碼</a>              
+        </div>
+
+
+        <div class="modal" tabindex="-1" id="exampleModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">                  
+                <h3 class="modal-title">會員條碼</h3>                
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" style="text-align:center;">
+                <div id="qrcode"></div>
+                <svg id="barcode"></svg> 
+                  
+                  
+                  
+                <div style="margin-top:5px;">&nbsp;</div>                  
+                <div><p style="color: #aaa;">條碼有效期限 04:56</p></div>
+                <div><a href="#" style="color: #aaa;" id="btn-genbarcode">重新產生</a></div>
+              </div>                
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" tabindex="-1" id="inputPwdModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">                               
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">                               
+                <p style="font-weight:bold;">請輸入會員密碼</p> 
+                <p style="color: #aaa;">為確保您的帳號安全，請輸入會員 A1234***** 的密碼進行驗證。</p>  
+                
+                <div class="input-groupp">                  
+                  <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping" >
+                </div>
+
+                <div style="margin-top:20px; text-align:center;">                
+                  <a href="#" class="btn btn-warning" style="width:140px; border-radius:20px;" data-bs-dismiss="modal" aria-label="Close" id="btn-inputpwd">確定</a>
+                </div>
+              </div>                
+            </div>
+          </div>
+        </div>
+       
+
+        
+        
+
+
+        <script>
+            liff.init({
+                liffId: '1660779941-kXYK5lZA',
+                //liffId: '1566379427-xKvNdlJ9', // willwill
+                //withLoginOnExternalBrowser: true
+            }).then(() => {
+                console.log(liff.isLoggedIn());  // 判斷開啟此網頁的 LINE 使用者是否為登入狀態
+
+                // if(liff.isLoggedIn()){                  
+                //   var liffProfile = liff.getProfile().then(profile => {
+                //     const name = profile.displayName;
+                //     const picture = profile.pictureUrl;
+
+                //     console.log(profile);
+                //     console.log(name);
+                //     console.log(picture);
+
+                //     $('#user-name').html(name);
+                //     $('#user-photo').attr('src', picture);
+                //   });                  
+                // }
+              });
+
+
+            $(function(){
+                var genBarcode = function(){
+                  var sn = Math.floor(Math.random() * 1000000000);
+                  var data = "{width: 150, height: 150, text:\"" + sn + "\"}";
+                  
+                  // 生成 barcode 並加到 #barcode 內                  
+                  JsBarcode("#barcode", sn);
+
+                  // 生成 qrcode 並加到 #qrcode 內
+                  $("#qrcode").qrcode(data);
+                }
+
+                genBarcode();
+
+                $('#btn-genbarcode').on('click', function(){
+                  $('#qrcode').empty();
+                  genBarcode();
+                });
+
+
+                $('.btn-getgift').on('click',function(){
+                  Swal.fire({                    
+                    icon: 'success',
+                    title: '領取成功',
+                    showConfirmButton: false,
+                    timer: 1000
+                  })
+                });
+
+                $('#btn-inputpwd').on('click',function(){
+                  alert('即將前往我的服務中心');
+                  location.href='https://hamipoint.cht.com.tw/my';
+                });
+
+                $('.div-tomycht').on('click',function(){
+                  var myModal = new bootstrap.Modal(document.getElementById("inputPwdModal"), {});
+                  myModal.show();
+                });
+
+                $('.div-tolinepay').on('click',function(){
+                  alert('前往LINE PAY繳費頁 (測試訊息)');                  
+                });
+
+            });
+        </script>
+    </body>
+</html>
